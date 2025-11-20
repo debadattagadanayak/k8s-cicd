@@ -1,2 +1,2 @@
 # k8s-cicd
-For auto upgrade and update webapp running in EKS
+For auto upgrade and update webapp running in EKS .
