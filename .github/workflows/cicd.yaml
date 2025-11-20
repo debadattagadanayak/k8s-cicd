@@ -30,6 +30,16 @@ jobs:
       run: |
         docker build -t devapp:v1 webapp-code
         docker images
+      
+    - name: Logging In To Docker Hub
+      uses: docker/login-action@v3
+      with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Verify Docker Login
+      run: |
+        echo "--- Checking who is logged in ---"
+        docker info | grep Username || echo "Not logged in"
       # we can search some workflow on google and use it like given below 
     # - uses: mr-smithers-excellent/docker-build-push@v6
     #   name: Build & push Docker image
