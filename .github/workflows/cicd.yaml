@@ -47,6 +47,6 @@ jobs:
         image: debadatta123/webapp-final
         tags: v1, latest
         registry: docker.io
-        dockerfile: weba---code/Dockerfile
+        dockerfile: webapp-code/Dockerfile
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
